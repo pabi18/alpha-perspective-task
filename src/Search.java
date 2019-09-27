@@ -49,9 +49,6 @@ public class Search {
                 String line = scan.nextLine();
                 System.out.println("Введено не целое число, повторите ввод:");
             }
-            if (!scan.hasNextInt()) {
-
-            }
         }
     }
 
@@ -87,10 +84,8 @@ public class Search {
                 break;
             } else {
                 String line = scan.nextLine();
-             }
-            if (!scan.hasNextInt()) {
                 System.out.println("Введено не целое число, повторите ввод:");
-            }
+             }
         }
         return X;
     }
@@ -143,8 +138,6 @@ public class Search {
                     else {
                         System.out.println("В массиве нет числа, которое строго меньше X, который равен " + X);
                     }
-
-
     }
 
     private void  arrayWrite (int [] array)
