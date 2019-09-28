@@ -3,14 +3,14 @@ use alpha;
 
 create table if NOT EXISTS  EMPLOYEE2 (
 ID int primary key auto_increment,
-CHIEF_ID int check (CHIEF_ID <= 20),
+CHIEF_ID int check (CHIEF_ID <= max(ID)),
 SALARY numeric(8,2)
 );
 
 create table if NOT EXISTS EMPLOYEE (
 ID int primary key auto_increment,
 DEPARTMENT_ID int,
-CHIEF_ID int check (CHIEF_ID <= 20),
+CHIEF_ID int check (CHIEF_ID <= max(ID)),
 Name varchar(100) ,
 POSITION varchar(100),
 foreign key (CHIEF_ID) references EMPLOYEE2(ID)
